@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "Three Finger Salute",
+	"description": "Hold control and alt, then click to remove all manner of nasty beasts from any site.",
+	"version": "1.0",
+
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+
+	"browser_action": {
+		"default_icon": "icon.png",
+    "default_popup": "popup.html"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["tfs.js", "popup.js"]
+		}
+	]
+}
+
